@@ -53,7 +53,7 @@ const SingleContact = () => {
                         console.log(error);
                     });
             });
-    }, []); // Предполагаю, что вам нужно загрузить список изображений только один раз
+    }, []); 
 
     useEffect(() => {
         if (user) {
@@ -84,7 +84,7 @@ const SingleContact = () => {
                 <div className="modernUserInfo">
                     <div className="avatarContainer">
                         <img 
-                            src={profileImg || "default_img_url_here"}
+                            src={imageList.length > 0 ? profileImg : "https://cdn-icons-png.flaticon.com/512/149/149071.png"}
                             alt="User Avatar"
                             className="modernUserAvatar"
                         />
@@ -103,7 +103,7 @@ const SingleContact = () => {
                             </div>
                             <div className="ageDetails">
                                 <CalendarMonthIcon />
-                                <span>{userAgeYear} лет</span>
+                                <span>{userAgeYear > 100 || userAgeYear <= 0 ? "-" : userAgeYear} лет</span>
                             </div>
                         </div>
                         <p className="moreInfo">{user.moreInfo}</p>

@@ -60,6 +60,15 @@
         font-weight: 600;
         margin-bottom: 30px;
     }
+
+    .passwordEyeSignIn {
+        position: absolute;
+        z-index: 20;
+        left: 270px;
+        top: 197px;
+        display: none;
+    
+    }
     
 
 }

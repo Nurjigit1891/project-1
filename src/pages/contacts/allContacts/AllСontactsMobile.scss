@@ -2,6 +2,13 @@
     .allContacts {
         width: 320px;
         margin:  0 auto;
+
+        .countAllContacts p{
+            width: 320px;
+            text-align: center;
+            font-weight: 500;
+    
+        }
     
         .cards {
             display: block;
