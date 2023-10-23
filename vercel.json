@@ -8,6 +8,23 @@
         {
             "src" : "/allContacts",
             "dest" : "/"
+        },
+        {
+            "src": "/searchContacts",
+            "dest" : "/"
+        },
+        {
+            "src" : "/signUp",
+            "dest" : "/"
+        },
+        {
+            "src" : "/signIn",
+            "dest" : "/"
+        },
+        {
+            "src" : "/singleContact/:id",
+            "dest" : "/"
         }
+
     ]
 }
