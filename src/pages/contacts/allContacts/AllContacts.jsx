@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './AllContacts.scss'; //стили для монитора 
-import './AllContactsMobile.scss'; //стили для телефона 
+import './AllСontactsMobile.scss'; //стили для телефона 
 import Navbar from '../../../components/navbar/Navbar'; //Навбар чтобы зайти на другие страницы 
 import { collection, getDocs } from 'firebase/firestore'; // получаем готовые функции из FireBase чтобы получить данные о юзеров
 import { db, storage } from '../../../server/firebase/firebase-config'; // db - это совокупность API ключев из FireBase
