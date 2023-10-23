@@ -83,11 +83,11 @@ const SingleContact = () => {
             {user ? (
                 <div className="modernUserInfo">
                     <div className="avatarContainer">
-                        <img 
-                            src={imageList.length > 0 ? profileImg : "https://cdn-icons-png.flaticon.com/512/149/149071.png"}
-                            alt="User Avatar"
-                            className="modernUserAvatar"
-                        />
+                    <img 
+                        src={profileImg && profileImg.length == 0 ? "https://cdn-icons-png.flaticon.com/512/149/149071.png" : profileImg  }
+                        className="modernUserAvatar"
+                    />
+
                     </div>
                     <div className="detailsContainer">
                         <h2>{user.name} {user.lastName}</h2>
