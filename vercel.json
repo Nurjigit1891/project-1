@@ -23,7 +23,7 @@
         },
         {
             "src" : "/singleContact/:id",
-            "dest" : "/"
+            "dest" : "/singleContact/:id"
         }
 
     ]
