@@ -1,0 +1,83 @@
+.signIn {
+    width: 1200px;
+
+    margin: 0 auto;
+
+    .signIn-text-1 {
+        text-align: center;
+        font-size: 35px;
+        letter-spacing: 3px;
+    }
+
+    form {
+        position: relative;
+    }
+
+
+    .signIn-input {
+        margin-top: 50px;
+        width: 300px;
+        margin-left: 450px;
+
+        padding: 10px;
+        font-size: 17px;
+
+        border-radius: 5px;
+
+        text-align: center;
+    }
+
+    .signIn-btn {
+        background-color: #034771;
+        width: 300px;
+        margin-left: 450px;
+        margin-top: 30px;
+        padding: 10px;
+        font-size: 20px;
+        color: white;
+        font-weight: 600;
+        border: transparent;
+        border-radius: 5px;
+
+        transition: all 0.3s ease;
+    }
+    .signIn-btn:hover {
+        background-color: #fff;
+        color: #034771;
+        border: 1px solid #034771;
+    }
+}
+
+.signIn-error-message-true {
+    text-align: center;
+    margin-top: 20px;
+    color: green;
+    font-weight: 600;
+    margin-bottom: 30px;
+
+}
+.signIn-error-message-false {
+    text-align: center;
+    margin-top: 20px;
+    color: red;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.passwordEyeSignIn {
+    position: absolute;
+    z-index: 20;
+    left: 710px;
+    top: 197px;
+    display: none;
+
+}
+
+.visibleSignIn {
+    display: block;
+
+}
+
+.hiddenSignIn {
+    display: none;
+}

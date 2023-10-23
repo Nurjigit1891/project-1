@@ -1,0 +1,38 @@
+
+.home {
+    width: 1200px;
+    height: 768px;
+    margin: 0 auto;
+
+    background: url('../../assets/DALL·E\ 2023-10-22\ 22.57.28\ -\ Illustration\ of\ a\ sophisticated\ rabbit\ dressed\ in\ a\ formal\ business\ suit\ and\ a\ stylish\ tie.png');
+    background-repeat: no-repeat;
+    background-position: center 70px;
+    background-size: 50%;
+
+    .home-info-block {
+        position: absolute;
+        bottom: 50px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .support-for-palestine {
+        display: flex;
+        margin-top: 100px;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+
+        .flag-palestine {
+            width: 500px;
+            border-radius: 15px;
+            border: 1px solid black;
+        }
+    }
+
+    .home-text-1-Allah {
+        width: 300px;
+        margin-top: 40px;
+        margin-left: 450px;
+    }
+    }

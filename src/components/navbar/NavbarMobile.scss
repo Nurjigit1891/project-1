@@ -1,0 +1,123 @@
+@media (min-width: 320px) and (max-width: 480px) {
+    .navbar {
+        width: 320px;
+    
+        margin: 0 auto;
+    
+        display: block;
+    
+        padding-top: 30px;
+        margin-bottom: 50px;
+        position: relative;
+        justify-content: space-between;
+
+
+        
+
+
+        .nav-link {
+            text-decoration: none;
+            font-size: 11px;
+            color: black;
+            font-weight: 800;
+        }
+    
+        .nav-link-admin-true {
+            display: block;
+            text-decoration: none;
+            font-size: 11px;
+            color: black;
+            font-weight: 800;
+
+        }
+        .nav-link-admin-false {
+            display: none;
+            text-decoration: none;
+            font-size: 16px;
+            color: black;
+            font-weight: 600;
+        }
+    
+ 
+    
+        .reportBtn {
+            font-size: 30px;
+            position: absolute;
+            right: 0px;
+            top: 600px;
+            cursor: pointer;
+            position: fixed;
+    
+            transition: all 0.4s ease;
+            display: none;
+
+        }
+        .reportBtn:hover {
+            transform: translateY(-5px);
+            color: red;
+        }
+        .reportBlock {
+            display: none;
+            position: absolute;
+            width: 250px;
+            height: 400px;
+            border: 0.5px solid black;
+            box-shadow: rgba(0, 0, 0, .24) 0px 3px 8px;
+            border-radius: 20px;
+            left: -150px;
+            z-index: 2;
+    
+    
+            .reportBlock-closeBtn {
+                margin-top: 20px;
+                margin-left: 10px;
+                cursor: pointer;
+    
+                transition: all 0.4s ease;
+            }
+            .reportBlock-text-1 {
+                text-align: center;
+            }
+            .reportBlock-input  {
+                font-size: 14px;
+                margin-left: 10px;
+                text-align: center;
+                padding: 4px;
+                font-weight: 700;
+            }
+            .reportBlock-closeBtn:hover {
+                transform: translateY(-5px);
+            }
+            .reportBlock-reportInfo {
+                width: 230px;
+                height: 180px;
+                margin-left: 10px;
+                margin-top: 20px;
+                font-size: 15px;
+            }
+            .reportBlock-sendReport {
+                width: 230px ;
+                margin-left: 10px;
+                margin-top: 10px;
+                padding: 15px;
+                font-weight: 700;
+    
+                background-color: #034771;
+                color: white;
+                letter-spacing: 1.4px;
+                border: 1px solid white;
+                border-radius: 10px;
+    
+                transition: all 0.4s ease;
+            }
+            .reportBlock-sendReport:hover {
+                background-color: #ffffff;
+                color: #034771;
+                border: 1px solid #034771;
+    
+            }
+    
+        }
+    
+    }
+}

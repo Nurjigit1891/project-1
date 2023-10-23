@@ -1,0 +1,102 @@
+@media (min-width: 320px) and (max-width: 480px) {
+    .searchContacts {
+        width: 320px;
+    
+        margin: 0 auto;
+    
+        .search-input {
+            margin-bottom: 20px;
+            width: 300px;
+            margin-left: 10px;
+            padding: 7px;
+            outline: none;
+            text-align: center;
+            font-size: 20px;
+        }
+    
+        .search-link {
+            background-color: lightblue;
+            padding: 10px 30px;
+            margin-top: 20px;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 600;
+            background-color: #034771;
+            color: white;
+            border-radius: 5px;
+    
+            transition: all 0.3s ease ;
+        }
+        .search-link:hover {
+            border: 1px solid #034771;
+            background-color: #fff;
+            color: #034771;
+        }
+
+    
+        .search-text-1 {
+            text-align: center;
+            font-style: italic;
+            margin-left: 350px;
+        }
+    
+        .cards {
+            display: block;
+            flex-wrap: nowrap;
+        
+            position: relative;
+            margin-bottom: 50px;
+            margin-top: 30px;
+        
+            .card {
+                
+                width: 300px;
+                height: 300px;
+        
+                padding-top: 20px;
+        
+                margin-left: 10px;
+                margin-top: 20px;
+        
+                border-radius: 10px;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        
+                .userName {
+                    text-align: center;
+        
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                .userJob {
+                    text-align: center;
+        
+                    margin-top: 5px;
+                    text-align: center;
+                }
+                .userAvatar {
+                    width: 120px;
+                    margin-left: 90px;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+                .userMoreInfoBtn {
+                    text-decoration: none;
+                    color: white;
+                    background-color: #034771;
+                    padding: 10px 40px;
+                    border-radius: 5px;
+                    font-weight: 600;
+                    margin-left: 48px;
+                }
+                .userMoreInfoBtn:hover {
+                    color: #034771;
+                    border: 1px solid #034771;
+                    background-color: #fff;
+                }
+                
+            }
+        }
+    }
+    
+    
+}

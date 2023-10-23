@@ -1,0 +1,54 @@
+/* Медиа-запрос для экранов от 320px до 480px */
+@media (min-width: 320px) and (max-width: 480px) {
+    .signUp {
+        width: 100%;
+        padding: 0 15px; // Добавим немного отступа по бокам для воздуха
+    }
+
+    .signUp-infoBlock-text-1 {
+        font-size: 14px; 
+        text-align: center; // Центрируем текст для лучшего восприятия
+    }
+
+    .registration-container h2 {
+        font-size: 18px; 
+        text-align: center; // Центрируем заголовок
+    }
+
+    .form-group {
+        flex-direction: column; // Элементы теперь будут идти один за другим, а не в ряд
+    }
+
+    .signUp-input {
+        width: 100%; // Заставим input растягиваться на всю доступную ширину
+        margin-bottom: 10px; // Добавим немного отступа снизу для разделения
+    }
+
+    .alreadyHaveAccount {
+        display: block; // Сделаем ссылку блочной, чтобы она занимала всю строку
+        text-align: center; // И центрируем текст внутри
+        margin-top: 15px; // Добавим отступ сверху
+    }
+
+    .signUp-btn {
+        display: block; // Кнопка будет занимать всю строку
+        margin: 20px auto 0; // Центрируем кнопку и добавляем отступ сверху
+    }
+    .form-group-text2 {
+        position: absolute;
+        right:  0;
+        bottom: 0;
+    }
+    .form-group-text1 {
+        position: absolute;
+        left: 0px;
+        top: 90px;
+        width: 200px;
+        font-style: italic;
+    }
+    .passwordEye {
+        position: absolute;
+        left: 270px;
+        top: 10px;
+    }
+}

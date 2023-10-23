@@ -1,0 +1,62 @@
+.adminPage {
+    background-color: #f0f2f5;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .adminPage .adminTable {
+    margin: 2em auto;
+    width: 90%;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+
+
+  /* Обычные стили для десктопной версии остаются без изменений */
+
+/* Медиа-запрос для мобильных устройств с максимальной шириной 480px */
+@media (max-width: 480px) {
+  .adminTable {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .adminTable table {
+    display: block;
+  }
+
+  .adminTable thead {
+    display: none; /* Скрываем заголовок таблицы на мобильных устройствах */
+  }
+
+  .adminTable tbody {
+    display: block;
+    width: 100%;
+  }
+
+  .adminTable tbody tr {
+    display: block;
+    margin-bottom: 0.625rem;
+    border: 1px solid #e0e0e0;
+    border-bottom: 5px dashed  black;
+  }
+
+  .adminTable td, .adminTable th {
+    display: block;
+    text-align: left;
+    padding: 0.6em;
+    border-bottom: 1px solid #e0e0e0;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .adminTable td::before, .adminTable th::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
