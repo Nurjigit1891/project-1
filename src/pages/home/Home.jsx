@@ -13,9 +13,14 @@ const Home = () => {
       <motion.div className="home">
       <Navbar />
 
+    
+      {/* <div className="home-info-block">
+        <p >Если есть вопросы по сайту, <br /> Звоните по номеру: <span style={{fontWeight: '700'}}> +996 (707) 78-00-48</span> </p>
+      </div> */}
 
-      <div className="home-info-block">
-        <p>Проблемы на сайте? <br /> Звоните по номеру: <span style={{fontWeight: '700'}}> +996 (707) 78-00-48</span> </p>
+      <div className="text-87">
+        <p>1987</p>
+        <p>Ынтымак</p>
       </div>
       </motion.div>
   

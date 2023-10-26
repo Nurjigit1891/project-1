@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './Navbar.scss'
 import { Link } from 'react-router-dom'
-import ReportGmailerrorredIcon from '@mui/icons-material/ReportGmailerrorred';
-import CloseIcon from '@mui/icons-material/Close';
 import './NavbarMobile.scss'
 
 const Navbar = () => {
@@ -13,12 +11,13 @@ const Navbar = () => {
     const user_status = localStorage.getItem('isStatus');
     if(user_status) {
       setIsStatus(JSON.parse(user_status))
+      
+      console.log(isStatus + " asd")
     }
 
   }, []);
 
 
-  localStorage.setItem('status' , true)
   useEffect (() => {
     const admin_status = localStorage.getItem("adminStatus");
 
@@ -31,7 +30,6 @@ const Navbar = () => {
     }
   },[])
 
-  localStorage.removeItem('status')
 
   return (
     <div>

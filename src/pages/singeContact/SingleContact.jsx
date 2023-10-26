@@ -5,14 +5,13 @@ import { useParams } from 'react-router-dom'; // Параметр нужен д�
 import { collection, getDocs } from 'firebase/firestore'; // путь и функция для полученя юзеров с FireBase
 import { db, storage } from '../../server/firebase/firebase-config'; // db - хранит в себе API ключей которые находились в firebase-config 
 import Navbar from '../../components/navbar/Navbar'; // компонент навбар для того чтобы, 
-import WorkIcon from '@mui/icons-material/Work'; //
 import CircularProgress from '@mui/material/CircularProgress';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import SouthAmericaIcon from '@mui/icons-material/SouthAmerica';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import { getDownloadURL, listAll, ref } from 'firebase/storage';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-
+import SchoolIcon from '@mui/icons-material/School';
 
 
 const SingleContact = () => {
@@ -105,6 +104,10 @@ const SingleContact = () => {
                                 <CalendarMonthIcon />
                                 <span>{userAgeYear > 100 || userAgeYear <= 0 ? "-" : userAgeYear} лет</span>
                             </div>
+                        </div>
+                        <div  className="endSchoolDetails">
+                            <span style={{color: '#777' ,fontWeight: '600' , marginRight: '20px'}}><SchoolIcon /></span>
+                            <span style={{color: '#777' ,fontWeight: '600'}}>{user.endSchoolYear}-году окончил школу</span>
                         </div>
                         <p className="moreInfo">{user.moreInfo}</p>
                     </div>

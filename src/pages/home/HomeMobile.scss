@@ -11,18 +11,28 @@
         position: relative;
         
         .home-info-block {
+            width: 320px;
             position: absolute;
             top: 400px;
             font-size: 15px;
             font-weight: 500;
+
         }
 
-
-        .home-text-1-Allah {
-            width: 200px;
-            margin-top: 40px;
-            margin-left: 0px;
-        }
+        .text-87 {
+            position: absolute;
+            bottom: 260px;
+            width: 320px;
+    
+            text-align: center;
         }
     
+        .text-87 p {
+            color: #3f484d;
+            font-weight: 700;
+            font-size: 50px;
+            font-style: italic;
+            font-family:Arial, Helvetica, sans-serif ;
+        }
+    }    
 }

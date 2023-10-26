@@ -2,6 +2,23 @@
     width: 1200px;
 
     margin: 0 auto;
+
+
+    .ant {
+        width: 556.8px;
+        text-align: center;
+        border-width: 2px !important;
+
+    } 
+
+    .endSchoolYear {
+        width: 726.8px;
+        border-width: 2px !important;
+
+    }
+
+
+
 }
 
 .registration-container {
@@ -22,16 +39,18 @@ h2 {
     margin: 10px 0;
     position: relative;
 
+
     .form-group-text1 {
         position: absolute;
-        right: 150px;
-        margin-top: 20px;
+        right: 380px;
+        margin-top: 45px;
+        display: none;
     }
 
 
     .form-group-text2 {
         position: relative;
-        left: -800px;
+        left: -400px;
         bottom: -60px;
     }
     

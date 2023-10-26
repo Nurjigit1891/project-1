@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { collection, getDocs, doc, deleteDoc } from 'firebase/firestore';
 import { db, storage } from '../../server/firebase/firebase-config';
-import { getDownloadURL, listAll, ref , deleteObject } from 'firebase/storage';
+import { getDownloadURL, listAll, ref , deleteObject, getStorage } from 'firebase/storage';
 import './AdminTable.scss';
 import Navbar from '../../components/navbar/Navbar';
 import { Link } from 'react-router-dom';
@@ -58,28 +58,31 @@ const AdminPage = () => {
   }, []);
 
   // для удаления юзеров с FireBase 
+
   const handleDeleteUser = async (userId) => {
     try {
-        const userToDelete = users.find((user) => user.id === userId);
-        
-        if (userToDelete && userToDelete.isAdmin) {
-            setShowAdminDel(true);
-            setTimeout(() => {setShowAdminDel(false)}, 5000);
-        } else if (!userToDelete.isAdmin) {
-            // Если у пользователя есть аватарка, удаляем ее из хранилища
-            if (userToDelete.avatarV4) {
-                const imageRef = ref(storage, 'images/' + userToDelete.avatarV4);
-                await deleteObject(imageRef);
-            }
-
-            // Удалить пользователя из Firestore
-            await deleteDoc(doc(db, 'users', userId));
-            setUsers((prevUsers) => prevUsers.filter((user) => user.id !== userId));
+      const userToDelete = users.find((user) => user.id === userId);
+      if (userToDelete && userToDelete.isAdmin) {
+        setShowAdminDel(true);
+        setTimeout(() => { setShowAdminDel(false) }, 5000);
+      } else if (!userToDelete.isAdmin) {
+        if (userToDelete.avatarV4) {
+          const dirRef = ref(storage, 'images');  // ссылка на директорию
+          const res = await listAll(dirRef);  // получение списка всех объектов в директории
+          const objectExists = res.items.some(item => item.name === userToDelete.avatarV4);
+          if (objectExists) {
+            const imageRef = ref(storage, 'images/' + userToDelete.avatarV4);
+            await deleteObject(imageRef);
+          }
         }
+        // Удалить пользователя из Firestore
+        await deleteDoc(doc(db, 'users', userId));
+        setUsers((prevUsers) => prevUsers.filter((user) => user.id !== userId));
+      }
     } catch (error) {
-        console.log("Error deleting user:", error);
+      console.log("Error deleting user:", error);
     }
-};
+  };
 
   return (
     <div className="adminPage">

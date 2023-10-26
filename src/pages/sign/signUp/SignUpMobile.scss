@@ -5,6 +5,37 @@
         padding: 0 15px; // Добавим немного отступа по бокам для воздуха
     }
 
+    .endSchoolYear {
+        width: 270px !important; 
+        border-width: 2px !important;
+    }
+
+    .choose-photo-profile {
+        display: block;        
+        bottom: -220px;
+        left: 50px;
+        position: absolute;
+        z-index: 100;
+    }
+
+    .alertSuccess {
+        position: absolute;
+        bottom: -380px;
+    }
+    .alertError {
+        position: absolute;
+        bottom: -380px;
+    }
+
+    
+    .ant {
+        width: 250px !important; 
+        text-align: center;
+        border-width: 62px !important;
+        border: 1px solid rgb(193, 9, 9);
+
+    } 
+
     .signUp-infoBlock-text-1 {
         font-size: 14px; 
         text-align: center; // Центрируем текст для лучшего восприятия
@@ -36,8 +67,6 @@
     }
     .form-group-text2 {
         position: absolute;
-        right:  0;
-        bottom: 0;
     }
     .form-group-text1 {
         position: absolute;
@@ -45,10 +74,20 @@
         top: 90px;
         width: 200px;
         font-style: italic;
+        bottom: 20px;
+        z-index: 20;
+        margin-bottom: 20px; 
     }
     .passwordEye {
         position: absolute;
         left: 270px;
         top: 10px;
+    }
+}
+
+@media (min-width: 500px)  {
+
+    .choose-photo-profile {
+        display: none;        
     }
 }

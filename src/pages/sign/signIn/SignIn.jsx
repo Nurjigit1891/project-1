@@ -56,7 +56,7 @@ const SignIn = () => {
         setLogin("Вы зашли в систему")
         setIsLogin(true)
 
-        navigate('/searchContacts')
+        // navigate('/searchContacts')
 
         // Вход админа
         if(foundUser.email === "admin@gmail.com" && foundUser.password === "12344" && foundUser.isAdmin === true) {
