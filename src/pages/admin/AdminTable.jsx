@@ -121,14 +121,14 @@ const AdminPage = () => {
                 <TableCell className="AvatarCell">
                   <Avatar src={urlImage.length > 0 ? urlImage[0] : "https://cdn-icons-png.flaticon.com/512/149/149071.png"} />
                 </TableCell>
-                <TableCell style={{fontWeight: 700}} className='table-name'>{user.name}</TableCell>
-                <TableCell style={{fontWeight: 700}}>{user.lastName}</TableCell>
-                <TableCell>{user.age}</TableCell>
-                <TableCell style={{fontWeight: 700}}>{user.email}</TableCell>
-                <TableCell>{user.region}</TableCell>
-                <TableCell>{user.phoneNumber}</TableCell>
-                <TableCell>{user.password}</TableCell>
-                <TableCell>{user.moreInfo}</TableCell>
+                  <TableCell style={{fontWeight: 700}} className='table-name'>{user.name}</TableCell>
+                  <TableCell style={{fontWeight: 700}}>{user.lastName}</TableCell>
+                  <TableCell>{user.age}</TableCell>
+                  <TableCell style={{fontWeight: 700}}>{user.email}</TableCell>
+                  <TableCell>{user.region}</TableCell>
+                  <TableCell>{user.phoneNumber}</TableCell>
+                  <TableCell>{user.password}</TableCell>
+                  <TableCell>{user.moreInfo}</TableCell>
                 <TableCell className="DeleteButton">
                   <Button color="secondary" onClick={() => handleDeleteUser(user.id)}>Удалить</Button>
                 </TableCell>
