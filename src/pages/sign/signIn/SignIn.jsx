@@ -18,12 +18,6 @@ const SignIn = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      if (loading) { // Если данные все еще загружаются
-        window.location.reload(false); // Принудительно перезагружаем страницу
-      }
-    }, 5000);
-
     const getUsers = async () => {
       try {
         const data = await getDocs(collection(db, "users"));
@@ -38,14 +32,21 @@ const SignIn = () => {
 
     getUsers();
 
-    return () => clearTimeout(timer); // Очищаем таймер при размонтировании
-  }, []);
+    // Если данные не загружены за 5 секунд, показываем сообщение
+    const timer = setTimeout(() => {
+      if (loading) {
+        setLoginMessage("Данные все еще загружаются, пожалуйста, подождите...");
+      }
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, [loading]);
 
   const checkValues = (e) => {
     e.preventDefault();
     const login = e.target.login.value;
     const password = e.target.password.value;
-  
+
     if (login.trim() && password.trim()) {
       const foundUser = users.find(user => user.email === login && user.password === password);
       if (foundUser) {
@@ -55,10 +56,9 @@ const SignIn = () => {
         }
         setIsLoginSuccessful(true);
         setLoginMessage("Вы вошли в систему.");
-        // Установим таймер для перенаправления после короткой задержки
         setTimeout(() => {
-          navigate('/allContacts'); // Убедитесь, что этот путь правильный
-        }, 1000); // Перенаправление через 1 секунду
+          navigate('/allContacts'); 
+        }, 1000);
       } else {
         setIsLoginSuccessful(false);
         setLoginMessage("Неверный логин или пароль!");
@@ -68,7 +68,6 @@ const SignIn = () => {
       setLoginMessage("Данные заполнены не корректно!");
     }
   };
-  
 
   return (
     <div>

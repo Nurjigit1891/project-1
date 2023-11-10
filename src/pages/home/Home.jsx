@@ -22,6 +22,11 @@ const Home = () => {
         <p>1987</p>
         <p>Ынтымак</p>
       </div>
+
+      <div className="adminSiteInfo">
+        <p className='adminSiteInfo-t-1'>Если есть вопросы по сайту</p>
+        <p className='adminSiteInfo-t-2'>+996 707 78 00 48</p>
+      </div>
       </motion.div>
   
     </div>
